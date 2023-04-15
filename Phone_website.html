@@ -1,0 +1,95 @@
+</html><!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Phone_Website</title>
+	<link rel="stylesheet" href="css/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="style4.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.1.0-10/css/all.css" integrity="sha512-Dj9pt3sZROOuTTs9S89ykGZeu1XQgWKg3DVpu5tZALApsrWdd3tnVjTclUuVONaHM4O8GgCnjSbHlTKXrd2OWg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+	<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=PT+Serif:wght@700&display=swap" rel="stylesheet">
+	<style> @import url('https://fonts.googleapis.com/css2?family=PT+Serif:wght@700&display=swap'); </style>
+</head>
+<body>
+	<div class="main">
+		<nav>
+			<div class="logo">
+				<img src="img/logo.png">	
+			</div>
+			<div class="nav-link">
+				<ul>
+					<li><a href="#">Home</a></li>
+					<li><a href="#">Phone</a></li>
+					<li><a href="#">Accessories</a></li>
+					<li><a href="#">Cart</a></li>
+				</ul>
+			</div>
+		</nav>
+		<div class="information">
+			<div class="overlay"></div>
+			<img src="img/mobile.png" class="mobile">
+			<div id="circle">
+				<div class="feature one">
+					<img src="img/camera.png">
+					<div>
+						<h1>Camera</h1>
+						<p>12MP Wide Angle Lens</p>
+					</div>	
+				</div>
+				<div class="feature two">
+					<img src="img/processor.png">
+					<div>
+						<h1>Processor</h1>
+						<p>Snapdragon Octa-core 11nm</p>
+					</div>	
+				</div>
+				<div class="feature three">
+					<img src="img/battery.png">
+					<div>
+						<h1>Battery</h1>
+						<p>5000mAh, 720Hrs Standby</p>
+					</div>	
+				</div>
+				<div class="feature four">
+					<img src="img/display.png">
+					<div>
+						<h1>Display</h1>
+						<p>6.5" Mini-Drop Full Screen</p>
+					</div>	
+				</div>
+			</div>
+		</div>
+		<div class="control">
+			<img src="img/arrow.png" id="upBtn">
+			<h3>Features</h3>
+			<img src="img/arrow.png" id="downBtn">
+		</div>
+	</div>
+
+	<script>
+		var circle = document.getElementById("circle")
+		var upBtn = document.getElementById("upBtn")
+		var downBtn = document.getElementById("downBtn")
+
+		var rotateValue = circle.style.transform;
+		var rotatesum;
+
+		upBtn.onclick = function()
+		{
+			rotatesum = rotateValue + "rotate(-90deg)";
+			circle.style.transform = rotatesum;
+			rotateValue = rotatesum;
+		}
+		downBtn.onclick = function()
+		{
+			rotatesum = rotateValue + "rotate(90deg)";
+			circle.style.transform = rotatesum;
+			rotateValue = rotatesum;
+		}
+	</script>
+
+
+	<script src="js/popper.min.js"></script>
+	<script src="js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
